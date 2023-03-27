@@ -1,0 +1,391 @@
+/*   Contraintes générales   */
+
+body {
+    font-family: 'Comic Neue', cursive;
+}
+
+.container {
+    position: relative;
+    max-width: 1200px;
+    margin-top: auto;
+    margin-left: 100px;
+    margin-right: 15px;
+    margin-bottom: 50px;
+}
+
+/*  HEADER */
+
+header {
+    position: relative;
+    margin-top: 50px;
+    margin-left: 60;
+    width: 100%;    
+    height: 100px;
+    display: inline-block;    
+}
+
+nav ul {
+    float: right;  
+    font-weight: bold;  
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+    list-style: none;
+}
+
+a:active {
+    color: blue;
+} 
+
+a:hover {
+    color: orange;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: black;
+    line-height: 80px;
+    cursor: pointer;
+    float: right;
+    display: none;
+}
+
+#cb {
+    display: none ;
+}
+
+@media (max-width: 960px) {
+    .checkbtn { 
+        display: block;
+    }
+
+    ul {
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+
+    nav ul li a {
+        font-size: 16px;
+    }
+
+    #cb:checked ~ ul {
+        left: 0;
+
+    }
+
+
+}
+
+/*  Contenu des pages  */
+
+/*     Accueil     */
+
+.div-un-index {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-left: 5%;    
+}
+
+.div-un-index a {
+    color: black;
+}
+
+.text h1 {
+    padding-top: 9%;
+    padding-left: 45%;
+}
+
+.text p {
+    padding-left: 10%;
+    text-align: center ;
+}
+
+.btn {
+    justify-content: space-between;
+    display:inline-block;
+    text-align: center;
+    margin-left: 15%;
+}
+
+.btn1{
+    background-color: #F4952C;
+    border: solid;
+    border-color: #F4952C;
+    margin: 10px 10px 10px 50px;
+    box-shadow: 0px 1px 0px 1px;
+}
+
+.btn2{
+    border: solid;
+    box-shadow: 0px 1px 0px 1px;
+}
+
+.div-un-index img{
+    float: right;
+} 
+
+.div-deux-index {
+    
+    padding-top: 5%;
+    padding-left: 5%;    
+}
+
+.grid-container {
+    display: grid;
+    gap: 25px 50px;
+    grid-template-columns: auto auto auto;
+    padding-top: 5%;
+    padding-left: 5%; 
+    padding-bottom: 7%;
+}
+  
+.grid-item {
+    background-color: #ffa500;
+    border-radius: 15px;
+    padding: 15px 15px 15px 15px;
+    font-size: 15px;
+
+
+}
+
+#user-ico {
+    width:auto;
+    height: 20px;    
+}
+
+.p-grid-1{
+    text-align: left;
+}
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/*     Réservation     */
+
+.rs {
+    color: #F2CD5D;
+    padding-left: 10%;
+    font-size:45px;
+}
+
+.wrapper{
+    max-width: 500px;
+    width: 100%;
+    background:#F2CD5D;
+    margin: 20px auto;
+    padding: 30px;
+    border-radius: 10px;
+    
+}
+
+.wrapper .form{
+    width: 100%;
+}
+
+.wrapper .form .inputfield{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.wrapper .form .inputfield label{
+    width: 200px;
+    color: black;
+    margin-right: 10px;
+   font-size: 14px;
+}
+
+.wrapper .form .inputfield .input,
+.wrapper .form .inputfield .textarea{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.wrapper .form .inputfield .textarea{
+    width: 100%;
+    height: 125px;
+    resize: none;
+}
+
+.wrapper .form .inputfield a {
+    padding-left: 40%;
+    font-size: 52%;
+}
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/*     Confirmation     */
+
+
+.div-conf p {
+    font-size: 50px;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    padding-left: 20%;
+    color: #A61F69;
+}
+
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/*     Restaurant     */
+
+.sec-un-restau{
+    display: grid;
+    gap: 25px 50px;
+    grid-template-columns: auto auto auto;
+    padding-top: 5%;
+    padding-left: 5%; 
+    padding-bottom: 7%;
+    
+}
+.parent {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    }
+    
+.div1 { 
+    grid-area: 1 / 1 / 2 / 2; 
+}
+
+.div2 { 
+    grid-area: 1 / 2 / 2 / 3; 
+}
+
+.div3 { 
+    grid-area: 1 / 3 / 3 / 5;
+}
+
+.div4 { 
+    grid-area: 3 / 4 / 4 / 5; 
+}
+
+.div5 { 
+    grid-area: 3 / 3 / 4 / 4; 
+}
+
+.div6 { 
+    grid-area: 2 / 1 / 4 / 3;
+}
+
+
+
+.div-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-left: 5%;  
+    padding-bottom: 10%;
+}
+
+.text-info {
+    padding: 2% 0%;
+}
+
+
+
+
+
+
+
+
+
+
+/* ---------------------------------------------------------------------------------------------- */
+
+/*     Ma_commande     */
+
+
+
+
+
+/*  FOOTER */
+
+.footies {
+    width: 100%;    
+    height: 100px;
+    margin-left: 50px;
+    margin-right: 15px;
+    
+}
+
+.lfoot {
+    position: absolute;
+    font-size: 14px;
+}
+
+.rfoot {
+    position: absolute;
+    right: 1%;
+    font-size: 14px;
+
+}
+.lfoot2 {
+    position: absolute;
+    font-size: 14px;
+}
+
+.rfoot2 {
+    position: absolute;
+    right: 1%;
+    font-size: 14px;
+
+}
+
+#mail-ico {
+    width:auto;
+    height: 20px;
+}
+
+#fb-ico {
+    width:auto;
+    height: 20px;
+}
+
+#linkedin-ico {
+    width:auto;
+    height: 20px;
+}
+
+#twit-ico {
+    width:auto;
+    height: 20px;
+}
+
+#insta-ico {
+    width:auto;
+    height: 20px;
+}

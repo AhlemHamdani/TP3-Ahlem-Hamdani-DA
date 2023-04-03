@@ -60,16 +60,16 @@
                 </div>
 
                 <div class="inputfield">
-                    <label aria-required="true"> Emplacement </label>
-                    <input type="radio" class="input" name="choix" value="salle">
+                    <label > Emplacement </label>
+                    <input type="radio" class="input" name="choix" value="salle" required="required">
                     <label> Salle à manger </label>
-                    <input type="radio" class="input" name="choix" value="terrasse">
+                    <input type="radio" class="input" name="choix" value="terrasse" required="required">
                     <label>Terrasse</label>
                 </div>
 
                 <div class="inputfield">
                     <label> Heure de réservation </label>
-                    <input type="time" class="input" required="required">
+                    <input type="time" class="input" min="12:00" max="21:00" required>
                 </div>
                     
                 <div class="inputfield">
